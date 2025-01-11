@@ -46,17 +46,21 @@ function LoginPage({setIsLogged}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     // Retrieve stored data from localStorage
     const storedData = JSON.parse(localStorage.getItem('signUpData'));
-
-    if (!storedData) {
+  
+    if (!storedData || storedData.length === 0) {
       setError('No account found. Please sign up first.');
       return;
     }
-
+  
     // Validate login credentials
-    if (email === storedData.email && password === storedData.password) {
+    const user = storedData.find(
+      (user) => user.email === email && user.password === password
+    );
+  
+    if (user) {
       setIsLogged(true);
       setEmail('');
       setPassword('');
@@ -66,6 +70,7 @@ function LoginPage({setIsLogged}) {
       setError('Invalid email or password. Please try again.');
     }
   };
+  
 
   return (
     <div

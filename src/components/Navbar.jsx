@@ -17,7 +17,8 @@ function Navbar({setIsLogged}) {
         <div className='container'>
         <div className="d-flex align-items-center p-3 border-bottom">
         <TestTube className="me-2" style={{ width: '32px', height: '32px', color: '#0d6efd' }} />
-        <span className="fw-bold fs-5">LIMS</span>
+        <span className="fw-bold fs-5">PathoCore </span>
+        {/* <span className='ms-2'> Inspired by pathology and core diagnostics.</span> */}
       </div>
         <ul className='navbar-nav ms-auto'>
             <li className='nav-item'>

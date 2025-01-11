@@ -15,7 +15,7 @@ import Contact from './layout/Contact';
 import AboutUs from './layout/AboutUs';
 
 function App() {
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged, setIsLogged] = useState(true);
 
   return (
    <> { isLogged ? (
