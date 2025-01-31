@@ -1,42 +1,3 @@
-// import React, { useState } from 'react'
-
-// function LoginPage() {
-//    const [email,setEmail] =useState('');
-//    const [password,setPassword] =useState('');
-   
-//     const handleChange = (e) =>{
-//       const {name,value} = e.target;
-//     }
-//   return (
-//     <div className='d-flex justify-content-center align-items-center' style={{minHeight : '100vh'}}>
-//        <div className='p-5 border rounded shadow-lg' style={{width:'100%' , maxWidth:'400px'}}>
-//         <h2 className='text-center'>Login</h2> 
-//         <form> 
-//         <div className='mb-3'>
-//          <label htmlFor="email" className="form-label">E-mail</label>
-//          <input type="email" placeholder='Enter email' className='form-control' name='email'  onChange={handleOnchange()}/>
-//          </div>
-
-//          <div className='mb-3'>
-//          <label htmlFor="password" className="form-label">Password</label>
-//          <input type="password" placeholder='Enter password' className='form-control' name = 'password' onChange={handleOnchange()}/>
-//          </div>
-
-//          <button type='submit' className='btn btn-primary w-100' onClick={handleSubmit()}>Login</button>
-         
-//       </form>
-         
-//           <div className='text-center mt-3'>
-//             <a href="http:#">forgot password?</a>
-//           </div>
-
-//        </div>
-//     </div>
-//   )
-// }
-
-// export default LoginPage;
-
 import React, { useState } from 'react';
 
 function LoginPage({setIsLogged}) {
@@ -62,6 +23,8 @@ function LoginPage({setIsLogged}) {
   
     if (user) {
       setIsLogged(true);
+    localStorage.setItem('LoginData', JSON.stringify(user));
+
       setEmail('');
       setPassword('');
       setError('');

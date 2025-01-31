@@ -49,7 +49,7 @@ function Reports() {
     <div className="container mt-4">
       {/* Patient List */}
       <section>
-        <h5 className="mx-4 mb-4">Report</h5>
+        <h4 className="mx-4 mb-4">Report</h4>
         <ul className="list-group">
           {patients.map(patient => (
             <li key={patient.id} className="list-group-item d-flex justify-content-between align-items-center" onClick={() => handlePatientClick(patient.id)}>

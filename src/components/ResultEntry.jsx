@@ -327,11 +327,11 @@ function ResultEntry() {
   return (
     <div className="container">
       {/* Header with Logo */}
-      <header className="d-flex justify-content-between align-items-center py-3 mb-4 shadow-lg rounded">
+      <header className="d-flex justify-content-between align-items-center py-3 mb-4 shadow rounded">
         <div className="d-flex align-items-center">
           {/* Using Lucide's Clipboard Icon as Logo */}
           <Clipboard size={20} color="#007bff" className='ms-5'/>
-          <h5 className="mx-3">Result Entry</h5>
+          <h4 className="mx-3">Result Entry</h4>
         </div>
       </header>
 
